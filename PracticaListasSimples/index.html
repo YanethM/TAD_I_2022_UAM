@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Crear los margenes de la pág -->
+    <div class="container section">
+      <!-- Crear una tabla -->
+      <table class="striped">
+        <!-- Aquí los nombres de las columnas -->
+        <thead>
+          <tr>
+            <!-- Creamos las columnas -->
+            <th>Fuente de los datos</th>
+            <th>Salida generada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Fila 1 -->
+          <tr>
+            <td><label>Cargar lista con valores por defecto</label></td>
+            <td><output id="default_list"></output></td>
+          </tr>
+          <!-- Fila 2 -->
+          <tr>
+            <td>
+              <!-- Usuario ingresara valores de los nodos -->
+              <div class="row">
+                <div class="col s8 l8 m8">
+                  <div class="input-field">
+                    <input type="text" name="node_value" id="node_value" />
+                    <label for="node_value"
+                      >Ingrese los valores separados por ","</label
+                    >
+                  </div>
+                </div>
+                <div class="col s4 l4 m4">
+                  <!-- Botón para asignar dichos valores a los nodos -->
+                  <a
+                    class="btn-floating waves-effect waves-ligth blue"
+                    onclick=""
+                  >
+                    <i class="material-icons">add</i>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <output id="input_node"></output>
+            </td>
+          </tr>
+          <!-- Fila 3 -->
+          <tr>
+            <td>
+              <div class="file-field input-field">
+                <div class="row">
+                  <div class="col">
+                    <!-- Input que permite el cargue de archivos -->
+                    <a
+                      class="btn-floating waves-effect waves-ligth blue"
+                      onclick=""
+                    >
+                      <i class="material-icons">cloud_upload</i>
+                      <!-- files_image[] y multiple nos permite cargar más de una imagen -->
+                      <input
+                        type="file"
+                        name="files_image[]"
+                        id="files_image"
+                        multiple
+                      />
+                    </a>
+                  </div>
+                  <div class="col">
+                    <!-- Muestra el nombre de los archivos seleccionados -->
+                    <div class="file-path-wrapper">
+                      <input type="text" class="file-path validate" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <output id="image_list"></output>
+            </td>
+          </tr>
+          <!-- Fila 4 -->
+          <tr>
+            <td>
+              <div class="file-field input-field">
+                <div class="row">
+                  <div class="col">
+                    <a
+                      class="btn-floating waves-effect waves-ligth blue"
+                      onclick=""
+                    >
+                      <i class="material-icons">cloud_upload</i>
+                      <input type="file" name="file_nodes" id="file_nodes" />
+                    </a>
+                  </div>
+                  <div class="col">
+                    <div class="file-path-wrapper">
+                      <input type="text" class="file-path validate" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <output id="file_nodes"></output>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Termina la tabla -->
+      <!-- Inicia secciòn que muestra la lista resultante -->
+      <!-- Botón que aplica los cambios -->
+      <div class="section">
+        <div class="row center">
+          <div class="col s12 m12 l12">
+            <button class="btn waves-effect waves-ligth blue">Aceptar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="row center">
+          <div class="col s8 m8 l8">
+            <!-- Mostrar lista resultante -->
+            <output id=""></output>
+          </div>
+          <div class="col s4 m4 l4">
+            <!-- Lista desplegable para modificar la lista resultante -->
+            <select
+              class="browser-default"
+              name="functionSelected"
+              id="functionSelected"
+            >
+              <option value="disabled selected"></option>
+              <option value="1">Añadir nodo</option>
+              <option value="2">Eliminar nodo</option>
+              <option value="3">Consultar valor de un nodo</option>
+              <option value="4">Eliminar nodo en determinada posición</option>
+              <option value="5">Añadir nodo en determinada posición</option>
+              <option value="6">
+                Actualizar valor de nodo en determinada posición
+              </option>
+              <option value="7">Invertir orden de la lista</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
